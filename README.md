@@ -17,8 +17,8 @@ Crafted a responsive, user-friendly website designed for easy management and str
 
 Developed a smart invoice system with real-time calculations, dynamic pricing, and multi-product handling—reducing manual errors and saving time.
 
-ERP SaaS – Daily Operations & Employee Management
+📊 ERP SaaS – Daily Operations & Employee Management
 
-Built a scalable ERP SaaS system to manage daily business operations and employee workflows in one centralized platform. It streamlines task handling, employee records, and operational processes to improve efficiency, organization, and overall business control. Designed for future expansion with modules like inventory and advanced reporting.
+Built a scalable ERP SaaS system to manage daily business operations and employee workflows in one centralized platform with real-time dashboard. It streamlines task handling, employee records, and operational processes to improve efficiency, organization, and overall business control. Designed for future expansion with modules like inventory and advanced reporting.
 
 Built for real clients. Designed for real impact.
