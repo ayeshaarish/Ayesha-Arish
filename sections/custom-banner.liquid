@@ -1,0 +1,99 @@
+{{ 'custom-banner.css' | asset_url | stylesheet_tag }}
+{{ 'custom-banner.js' | asset_url | script_tag }}
+<section class="custom-banner">
+
+  <div class="page-width">
+
+    <div class="custom-banner__wrapper">
+
+      <!-- Banner Content -->
+      <div class="custom-banner__content">
+
+        {% if section.settings.heading != blank %}
+          <h1 class="custom-banner__heading">
+            {{ section.settings.heading }}
+          </h1>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <p class="custom-banner__description">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+
+        {% if section.settings.button_text != blank %}
+          <a
+            class="custom-banner__button"
+            href="{{ section.settings.button_link }}"
+          >
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+
+      </div>
+
+      <!-- Banner Image -->
+      <div class="custom-banner__image">
+
+        {% if section.settings.image != blank %}
+
+          {{
+            section.settings.image
+            | image_url: width: 1200
+            | image_tag:
+              loading: 'lazy',
+              class: 'custom-banner__img'
+          }}
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "tag": "section",
+  "class": "section-custom-banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Banner Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Write something here."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}
