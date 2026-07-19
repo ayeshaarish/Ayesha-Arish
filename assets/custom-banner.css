@@ -32,7 +32,7 @@
 
 .custom-banner__description {
   margin-bottom: 2rem;
-  max-width: 480px;
+  max-width: 25%;
 }
 
 .custom-banner__button {
@@ -61,7 +61,7 @@
 .custom-banner__bottom-text {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: #888585;
+  background: #e8e4e4;
   color: #fff;
   text-align: center;
   padding: 24px 20px;
