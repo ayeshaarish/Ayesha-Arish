@@ -1,145 +1,41 @@
-/* ===========================================================
-   Gift Banner
-   =========================================================== */
+/* ==========================================================
+   Custom Banner
+   ========================================================== */
 
-.gift-banner {
-    position: relative;
-    min-height: 780px;
-    overflow: hidden;
+.custom-banner {
+  padding: 80px 0;
 }
 
-.gift-banner__background {
-    position: relative;
-    inset: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: 0;
+.custom-banner__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
-.gift-banner .page-width {
-    position: relative;
-    z-index: 2;
-    height: 780px;
-    display: flex;
-    align-items: flex-end;
+.custom-banner__content,
+.custom-banner__image {
+  flex: 1;
 }
 
-.gift-banner__content {
-    max-width: 500px;
-    padding-bottom: 95px;
-    position: obsulete;
+.custom-banner__heading {
+  margin-bottom: 1rem;
 }
 
-.gift-banner__heading {
-    margin: 0;
-    font-size: 72px;
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: -2px;
-    color: #000;
+.custom-banner__description {
+  margin-bottom: 2rem;
 }
 
-.gift-banner__description {
-    margin-top: 42px;
-    font-size: 28px;
-    line-height: 1.45;
-    color: #000;
+.custom-banner__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  text-decoration: none;
 }
 
-.gift-banner__button {
-    margin-top: 60px;
-    width: 225px;
-    height: 68px;
-    background: #000;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    text-decoration: none;
-    transition: background .25s ease;
-}
-
-.gift-banner__button:hover {
-    background: #222;
-}
-
-.gift-banner__button span {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-}
-
-.gift-banner__button svg {
-    flex-shrink: 0;
-}
-
-/* ===========================
-   Tablet
-   =========================== */
-
-@media (max-width: 991px) {
-
-    .gift-banner {
-        min-height: 620px;
-    }
-
-    .gift-banner .page-width {
-        height: 620px;
-    }
-
-    .gift-banner__content {
-        max-width: 420px;
-        padding-bottom: 70px;
-    }
-
-    .gift-banner__heading {
-        font-size: 54px;
-    }
-
-    .gift-banner__description {
-        font-size: 20px;
-        margin-top: 28px;
-    }
-
-}
-
-/* ===========================
-   Mobile
-   =========================== */
-
-@media (max-width: 749px) {
-
-    .gift-banner {
-        min-height: 520px;
-    }
-
-    .gift-banner .page-width {
-        height: 520px;
-        align-items: flex-end;
-    }
-
-    .gift-banner__content {
-        max-width: 100%;
-        padding-bottom: 45px;
-    }
-
-    .gift-banner__heading {
-        font-size: 38px;
-        line-height: 1.1;
-    }
-
-    .gift-banner__description {
-        margin-top: 18px;
-        font-size: 16px;
-    }
-
-    .gift-banner__button {
-        width: 180px;
-        height: 54px;
-        margin-top: 36px;
-    }
-
+.custom-banner__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

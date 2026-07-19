@@ -1,56 +1,60 @@
 {{ 'custom-banner.css' | asset_url | stylesheet_tag }}
 {{ 'custom-banner.js' | asset_url | script_tag }}
-<section class="gift-banner">
-
-  {% if section.settings.banner_image != blank %}
-    <div
-      class="gift-banner__background"
-      style="background-image:url('{{ section.settings.banner_image | image_url: width: 2200 }}');"
-    ></div>
-  {% endif %}
+<section class="custom-banner">
 
   <div class="page-width">
 
-    <div class="gift-banner__content">
+    <div class="custom-banner__wrapper">
 
-      {% if section.settings.heading != blank %}
-        <h1 class="gift-banner__heading">
-          {{ section.settings.heading }}
-        </h1>
-      {% endif %}
+      <!-- Banner Content -->
+      <div class="custom-banner__content">
 
-      {% if section.settings.description != blank %}
-        <div class="gift-banner__description">
-          {{ section.settings.description }}
-        </div>
-      {% endif %}
+        {% if section.settings.heading != blank %}
+          <h1 class="custom-banner__heading">
+            {{ section.settings.heading }}
+          </h1>
+        {% endif %}
 
-      {% if section.settings.button_text != blank %}
-        <a
-          href="{{ section.settings.button_link }}"
-          class="gift-banner__button"
-        >
-          <span>{{ section.settings.button_text }}</span>
+        {% if section.settings.description != blank %}
+          <p class="custom-banner__description">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
 
-          <svg
-            width="20"
-            height="14"
-            viewBox="0 0 20 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        {% if section.settings.button_text != blank %}
+          <a
+            class="custom-banner__button"
+            href="{{ section.settings.button_link }}"
           >
-            <path d="M13 1L19 7L13 13" stroke="currentColor" stroke-width="2"/>
-            <path d="M19 7H0" stroke="currentColor" stroke-width="2"/>
-          </svg>
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
 
-        </a>
-      {% endif %}
+      </div>
+
+      <!-- Banner Image -->
+      <div class="custom-banner__image">
+
+        {% if section.settings.image != blank %}
+
+          {{
+            section.settings.image
+            | image_url: width: 1200
+            | image_tag:
+              loading: 'lazy',
+              class: 'custom-banner__img'
+          }}
+
+        {% endif %}
+
+      </div>
 
     </div>
 
   </div>
 
 </section>
+
 {% schema %}
 {
   "name": "Custom Banner",
