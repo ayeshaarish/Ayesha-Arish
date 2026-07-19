@@ -1,0 +1,141 @@
+{{ 'custom-header.css' | asset_url | stylesheet_tag }}
+{{ 'custom-header.js' | asset_url | script_tag }}
+
+<header class="custom-header">
+
+  <div class="page-width">
+
+    <div class="custom-header__wrapper">
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="custom-header__toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="CustomMobileMenu"
+      >
+        ☰
+      </button>
+
+      <!-- Logo -->
+      <div class="custom-header__logo">
+
+        {% if section.settings.logo != blank %}
+          {{
+            section.settings.logo
+            | image_url: width: 240
+            | image_tag:
+              loading: 'lazy',
+              class: 'custom-header__logo-image',
+              alt: shop.name
+          }}
+        {% else %}
+          <span class="custom-header__logo-text">
+            {{ section.settings.logo_text }}
+          </span>
+        {% endif %}
+
+      </div>
+
+      <!-- Tagline -->
+      <div class="custom-header__tagline">
+        {{ section.settings.tagline }}
+      </div>
+
+      <!-- CTA Button -->
+      {% if section.settings.button_text != blank %}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="custom-header__button"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <aside
+    id="CustomMobileMenu"
+    class="custom-mobile-menu"
+    aria-hidden="true"
+  >
+
+    <button
+      class="custom-mobile-menu__close"
+      type="button"
+      aria-label="Close menu"
+    >
+      ×
+    </button>
+
+    {% if section.settings.menu != blank %}
+
+      <nav class="custom-mobile-menu__nav">
+
+        {% for link in section.settings.menu.links %}
+
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+
+        {% endfor %}
+
+      </nav>
+
+    {% endif %}
+
+  </aside>
+
+</header>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "tag": "section",
+  "class": "section-custom-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo Text",
+      "default": "Your Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Holiday Gift Guide"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Mobile Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header"
+    }
+  ]
+}
+{% endschema %}

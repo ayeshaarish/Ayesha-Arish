@@ -1,10 +1,15 @@
 {
   "sections": {
+     "header": {
+      "type": "custom-header"
+    },
     "banner": {
       "type": "custom-banner"
     }
   },
   "order": [
+    "header",
     "banner"
   ]
 }
+ 
