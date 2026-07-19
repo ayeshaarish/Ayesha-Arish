@@ -3,7 +3,6 @@
    ========================================================== */
 
 .custom-banner {
-  padding: 80px 0;
   position: relative; 
 }
 
@@ -12,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-},
+}
 .custom-banner__image {
   position: relative;
   flex: 1;
