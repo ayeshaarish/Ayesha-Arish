@@ -23,7 +23,7 @@
   text-align: left;
   left: 4rem;
   margin-left: 3rem;
-  margin-top: 20rem;
+  margin-top: 30rem;
 }
 
 .custom-banner__heading {
@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   z-index: 1;
 }
