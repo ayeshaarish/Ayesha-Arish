@@ -22,7 +22,8 @@
   z-index: 1;
   text-align: left;
   left: 4rem;
-  margin-left: 4rem;
+  margin-left: 3rem;
+  marin-top: 4rem;
 }
 
 .custom-banner__heading {
