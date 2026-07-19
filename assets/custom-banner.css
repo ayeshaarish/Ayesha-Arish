@@ -5,12 +5,13 @@
 .custom-banner {
   padding: 80px 0;
   position: relative;
+   z-index: 1;
 }
 
 
 .custom-banner__content {
   position: obsolute;
-  padding-left: 40rem;
+  left: 4rem;
   bottom: 5rem; /* Adjust as needed */
   z-index: 2;
   max-width: 500px;
