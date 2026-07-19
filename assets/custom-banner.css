@@ -32,7 +32,7 @@
 
 .custom-banner__description {
   margin-bottom: 2rem;
-  max-width: 30%;
+  max-width: 480px;
 }
 
 .custom-banner__button {
@@ -46,21 +46,7 @@
   z-index: 1;
 }
 
-.custom-banner__button::before {
-  background: #e8e17d; /* Hover color */
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-  z-index: -1;
-}
 
-.button:hover {
-  color: #f3f78e;
-}
-
-.custom-banner__button:hover::before {
-  transform: scaleX(1);
-}
 
 .custom-banner__img {
   display: block;
