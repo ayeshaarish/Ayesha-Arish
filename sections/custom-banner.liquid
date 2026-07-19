@@ -51,6 +51,12 @@
 
     </div>
 
+    <div class="custom-banner__bottom-text">
+  {% if section.settings.bottom_text != blank %}
+    <p>{{ section.settings.bottom_text }}</p>
+  {% endif %}
+</div>
+
   </div>
 
 </section>
@@ -88,7 +94,13 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
-    }
+    },
+    {
+  "type": "textarea",
+  "id": "bottom_text",
+  "label": "Bottom Text",
+  "default": "text area"
+}
   ],
   "presets": [
     {

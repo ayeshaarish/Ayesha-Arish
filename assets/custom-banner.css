@@ -23,7 +23,7 @@
   text-align: left;
   left: 4rem;
   margin-left: 3rem;
-  marin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .custom-banner__heading {
@@ -52,4 +52,38 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* ==========================================================
+   Bottom Text Section
+   ========================================================== */
+
+.custom-banner__bottom-text {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #888585;
+  color: #fff;
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.custom-banner__bottom-text p {
+  margin: 0;
+  max-width: 900px;
+  margin-inline: auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 749px) {
+  .custom-banner__bottom-text {
+    padding: 18px 16px;
+  }
+
+  .custom-banner__bottom-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
