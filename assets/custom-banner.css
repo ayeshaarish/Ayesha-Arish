@@ -10,7 +10,7 @@
 
 .custom-banner__content {
   position: obsolute;
-  left: 40rem;
+  padding-left: 40rem;
   bottom: 5rem; /* Adjust as needed */
   z-index: 2;
   max-width: 500px;
@@ -18,7 +18,7 @@
 
 .custom-banner__heading {
   margin-bottom: 1rem;
-   margin-left: 40rem;
+   margin-left: 4rem;
 }
 
 .custom-banner__description {
