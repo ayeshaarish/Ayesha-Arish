@@ -23,7 +23,7 @@
   text-align: left;
   left: 4rem;
   margin-left: 3rem;
-  margin-top: 30rem;
+  margin-top: 25rem;
 }
 
 .custom-banner__heading {
@@ -32,7 +32,7 @@
 
 .custom-banner__description {
   margin-bottom: 2rem;
-  max-width: 25%;
+  max-width: 30%;
 }
 
 .custom-banner__button {
@@ -62,7 +62,6 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   background: #e8e4e4;
-  color: #fff;
   text-align: center;
   padding: 24px 20px;
 }
@@ -72,6 +71,7 @@
   max-width: 900px;
   margin-inline: auto;
   font-size: 18px;
+  color: #090909;
   line-height: 1.6;
 }
 
