@@ -21,7 +21,8 @@
   position: absolute;
   z-index: 1;
   text-align: left;
-  max-width: 30%;
+  left: 4rem;
+  margin-left: 4rem;
 }
 
 .custom-banner__heading {
@@ -30,6 +31,7 @@
 
 .custom-banner__description {
   margin-bottom: 2rem;
+  max-width: 30%;
 }
 
 .custom-banner__button {
