@@ -9,7 +9,7 @@
 }
 
 .gift-banner__background {
-    position: absolute;
+    position: relative;
     inset: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,6 +28,7 @@
 .gift-banner__content {
     max-width: 500px;
     padding-bottom: 95px;
+    position: obsulete;
 }
 
 .gift-banner__heading {
