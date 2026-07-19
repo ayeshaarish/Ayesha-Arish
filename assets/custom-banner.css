@@ -7,18 +7,13 @@
   position: relative;
 }
 
-.custom-banner__wrapper {
-
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
 
 .custom-banner__content {
-  position: obsolete;
-  display: flex;
-  flex: 1;
+  position: obsolute;
+  left: 4rem;
+  bottom: 5rem; /* Adjust as needed */
+  z-index: 2;
+  max-width: 500px;
 }
 
 .custom-banner__heading {
