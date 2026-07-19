@@ -37,10 +37,31 @@
 
 .custom-banner__button {
   display: inline-flex;
+  background-color: #0a0a0a;
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
   text-decoration: none;
+  z-index: 1;
+}
+
+.custom-banner__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000; /* Hover color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.custom-banner__button:hover::before {
+  transform: scaleX(1);
 }
 
 .custom-banner__img {
