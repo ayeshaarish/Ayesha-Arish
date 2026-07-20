@@ -20,20 +20,20 @@
             {{ section.settings.description }}
           </p>
         {% endif %}
-     
-      {% if section.settings.button_text != blank %}
-        <a
-          class="custom-banner__button"
-          href="{{ section.settings.button_link }}"
-        >
-          <span>{{ section.settings.button_text }}</span>
-          <span class="custom-banner__button-arrow">→</span>
-        </a>
-      {% endif %}
+
+        {% if section.settings.button_text != blank %}
+          <a
+            class="custom-banner__button"
+            href="{{ section.settings.button_link }}"
+          >
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
 
       </div>
 
-   <!-- Banner Image -->
+      <!-- Banner Image -->
+<!-- Banner Image -->
 <div class="custom-banner__image">
 
   {% if section.settings.image != blank %}
@@ -55,11 +55,11 @@
           class: 'custom-banner__img'
       }}
 
-        </picture>
+    </picture>
 
-      {% endif %}
+  {% endif %}
 
-    </div>
+</div>
 
     </div>
 
@@ -75,33 +75,26 @@
 
 {% schema %}
 {
-      "name": "Custom Banner",
-      "tag": "section",
-      "class": "section-custom-banner",
+  "name": "Custom Banner",
+  "tag": "section",
+  "class": "section-custom-banner",
   "settings": [
-        {
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Banner Image"
     },
     {
-      "type": "image_picker",
-      "id": "mobile_image",
-      "label": "Mobile Banner Image"
-    },
-    {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "The Gift Guide"
+      "default": "Heading"
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. 
-      Explore our curated selection and find the perfect gifts to delight 
-      your loved ones this holiday season."
+      "default": "Write something here."
     },
     {
       "type": "text",
@@ -118,7 +111,7 @@
     "type": "textarea",
     "id": "bottom_text",
     "label": "Bottom Text",
-    "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    "default": "Write something here."
     }
   ],
   "presets": [
