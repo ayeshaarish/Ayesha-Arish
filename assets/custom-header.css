@@ -1,0 +1,233 @@
+/* ==========================================================
+   Custom Header
+   ========================================================== */
+
+.custom-header {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+}
+
+.custom-header .page-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+/* ==========================================================
+   Header Layout
+   ========================================================== */
+
+.custom-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ==========================================================
+   Logo
+   ========================================================== */
+
+.custom-header__logo {
+  flex: 1;
+}
+
+.custom-header__logo-image {
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+}
+
+.custom-header__logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ==========================================================
+   Tagline
+   ========================================================== */
+
+.custom-header__tagline {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* ==========================================================
+   Button
+   ========================================================== */
+
+.custom-header__button {
+  flex: 1;
+  display: inline-flex;
+  width: 100%;
+  height: 56px;
+  border: none;
+  background: #FFF544;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: .08em;
+  transition: .3s;
+  padding: 14px 28px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.custom-header__button-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.custom-header__button:hover {
+  background: #040301;
+  color: #f2f0f0;
+}
+
+.custom-header__button:hover .custom-header__button-arrow {
+  transform: translateX(5px);
+}
+
+/* ==========================================================
+   Mobile Toggle
+   ========================================================== */
+
+.custom-header__toggle {
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  color: #000;
+}
+
+/* ==========================================================
+   Mobile Drawer
+   ========================================================== */
+@media screen and (max-width: 749px) {
+
+  .custom-header__tagline,
+  .custom-header__button {
+    display: none;
+  }
+
+}
+   
+.custom-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  padding: 80px 30px;
+  transform: translateX(-100%);
+  transition: transform .35s ease;
+  z-index: 999;
+}
+
+.custom-mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* ==========================================================
+   Close Button
+   ========================================================== */
+
+.custom-mobile-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Mobile Navigation
+   ========================================================== */
+
+.custom-mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.custom-mobile-menu__nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+/* ==========================================================
+   Prevent Body Scroll
+   ========================================================== */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media (max-width: 749px) {
+
+  .custom-header .page-width {
+    padding: 20px;
+  }
+
+  .custom-header__wrapper {
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    grid-template-areas:
+      "toggle logo"
+      "tagline tagline"
+      "button button";
+
+    row-gap: 20px;
+
+    align-items: center;
+  }
+
+  .custom-header__toggle {
+    display: block;
+    grid-area: toggle;
+  }
+
+  .custom-header__logo {
+    grid-area: logo;
+    text-align: center;
+  }
+
+  .custom-header__logo-image {
+    margin: 0 auto;
+  }
+
+  .custom-header__tagline {
+    grid-area: tagline;
+    text-align: center;
+  }
+
+  .custom-header__button {
+    grid-area: button;
+    justify-content: center;
+  }
+  
+}

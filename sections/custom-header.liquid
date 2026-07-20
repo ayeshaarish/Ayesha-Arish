@@ -8,15 +8,42 @@
     <div class="custom-header__wrapper">
 
       <!-- Mobile Menu Toggle -->
-      <button
-        class="custom-header__toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="CustomMobileMenu"
-      >
-        ☰
-      </button>
+    <button
+    class="custom-header__toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="CustomMobileMenu"
+    >
+
+    <svg
+        class="custom-header__toggle-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+    >
+        <path
+        d="M3 6H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+        <path
+        d="M3 12H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+        <path
+        d="M3 18H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+    </svg>
+
+    </button>
 
       <!-- Logo -->
       <div class="custom-header__logo">
@@ -44,14 +71,18 @@
       </div>
 
       <!-- CTA Button -->
+
+      
       {% if section.settings.button_text != blank %}
         <a
-          href="{{ section.settings.button_link }}"
           class="custom-header__button"
+          href="{{ section.settings.button_link }}"
         >
-          {{ section.settings.button_text }}
+          <span>{{ section.settings.button_text }}</span>
+          <span class="custom-header__button-arrow">→</span>
         </a>
       {% endif %}
+
 
     </div>
 
@@ -71,6 +102,26 @@
     >
       ×
     </button>
+
+    <!-- Mobile Drawer Content -->
+<div class="custom-mobile-menu__content">
+
+  {% if section.settings.tagline != blank %}
+    <p class="class="custom-header__tagline"">
+      {{ section.settings.tagline }}
+    </p>
+  {% endif %}
+
+  {% if section.settings.button_text != blank %}
+    <a
+      href="{{ section.settings.button_link }}"
+      class="custom-mobile-menu__button"
+    >
+      {{ section.settings.button_text }}
+    </a>
+  {% endif %}
+
+</div>
 
     {% if section.settings.menu != blank %}
 
@@ -106,14 +157,14 @@
     {
       "type": "text",
       "id": "logo_text",
-      "label": "Logo Text",
+      "label": "TISSO VISION",
       "default": "Your Logo"
     },
     {
       "type": "text",
       "id": "tagline",
       "label": "Tagline",
-      "default": "Holiday Gift Guide"
+      "default": "Find the ideal gift for your loved ones."
     },
     {
       "type": "text",
