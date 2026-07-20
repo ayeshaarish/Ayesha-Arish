@@ -24,7 +24,7 @@
     "featured-products": {
       "type": "custom-featured-products",
       "settings": {
-        "heading": "Featured Products",
+        "heading": "Tisso Vison in the wild",
         "collection": "featured-collection-test",
         "products_to_show": 6,
         "columns_desktop": 3,
