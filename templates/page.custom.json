@@ -13,7 +13,7 @@
       "type": "custom-banner",
       "settings": {
         "image": "shopify://shop_images/banner-image.png",
-        "heading": "Heading",
+        "heading": "The Gift Guide",
         "description": "Write something here.",
         "button_text": "Shop Now",
         "button_link": "",
