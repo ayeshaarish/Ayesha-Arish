@@ -5,11 +5,15 @@
     },
     "banner": {
       "type": "custom-banner"
+    },
+     "featured-products": {
+      "type": "custom-featured-products"
     }
   },
   "order": [
     "header",
-    "banner"
+    "banner",
+    "featured-products"
   ]
 }
  

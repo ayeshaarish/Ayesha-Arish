@@ -21,7 +21,7 @@
   position: absolute;
   z-index: 1;
   text-align: left;
-  left: 4rem;
+  left: 2rem;
   margin-left: 1rem;
   margin-top: 20rem;
   word-spacing: 8px;
@@ -38,16 +38,37 @@
 
 .custom-banner__button {
   display: inline-flex;
-  background-color: #0a0a0a;
+  width: fit-content;
+  height: 56px;
+  border: none;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: .08em;
+  transition: .3s;
   padding: 14px 28px;
-  color: #ffffff;
-  text-decoration: none;
   z-index: 1;
+  transition: all 0.3s ease;
 }
 
+.custom-banner__button-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
 
+/* Hover */
+.custom-banner__button:hover {
+  background: #FFF544;
+  color: #000;
+}
+
+.custom-banner__button:hover .custom-banner__button-arrow {
+  transform: translateX(5px);
+}
 
 .custom-banner__img {
   display: block;
@@ -69,11 +90,10 @@
 
 .custom-banner__bottom-text p {
   margin: 0;
-  max-width: 900px;
+  max-width: 100%;
   margin-inline: auto;
-  font-size: 18px;
+  font-size: 14px;
   color: #090909;
-  line-height: 1.6;
 }
 
 /* Mobile */
@@ -86,5 +106,50 @@
   .custom-banner__bottom-text p {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+@media screen and (max-width: 749px) {
+
+  .custom-banner__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-banner__content {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    text-align: center;
+    content-justify: center;
+  }
+
+  .custom-banner__heading {
+    max-width: 30ch; /* Adjust as needed */
+    margin: 0 auto 15px;
+  }
+
+  .custom-banner__description {
+    max-width: 30ch;          /* Controls line length */
+    margin: 0 auto;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;    /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+
+  .custom-banner__image {
+    width: 100%;
+  }
+
+  .custom-banner__img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }

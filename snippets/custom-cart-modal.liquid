@@ -1,0 +1,170 @@
+<div
+  class="custom-cart-modal"
+  id="CustomCartModal"
+  aria-hidden="true"
+>
+
+  <div class="custom-cart-modal__overlay"></div>
+
+  <div class="custom-cart-modal__content">
+
+    <button
+      type="button"
+      class="custom-cart-modal__close"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <div class="custom-cart-modal__wrapper">
+
+      <!-- Product Image -->
+      <div class="custom-cart-modal__image">
+
+        <img
+          id="CustomCartImage"
+          src=""
+          alt=""
+          loading="lazy"
+        >
+
+      </div>
+
+      <!-- Product Info -->
+      <div class="custom-cart-modal__info">
+
+        <h2
+          id="CustomCartTitle"
+          class="custom-cart-modal__title"
+        ></h2>
+           <div
+          id="CustomCartDescription"
+          class="custom-cart-modal__description"
+        ></div>
+
+        <div
+          id="CustomCartPrice"
+          class="custom-cart-modal__price"
+        ></div>
+
+
+    </div>
+
+      <!-- Color -->
+
+        <div
+          class="custom-cart-modal__option"
+          id="CustomCartColorWrapper"
+        >
+
+          <label class="custom-cart-modal__label">
+            Color
+          </label>
+
+          <div
+            id="CustomCartColors"
+            class="custom-cart-modal__colors"
+          >
+
+          </div>
+
+        </div>
+
+        <!-- Size -->
+        
+        <div
+          class="custom-cart-modal__option"
+          id="CustomCartSizeWrapper"
+        >
+
+          <label class="custom-cart-modal__label">
+            Size
+          </label>
+
+          <div class="custom-cart-modal__select-wrapper">
+
+            <select
+              id="CustomCartSizes"
+              class="custom-cart-modal__select"
+            >
+
+              <option value="">
+                Choose your size
+              </option>
+
+            </select>
+
+            <span class="custom-cart-modal__select-icon">
+
+              ▼
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- Quantity -->
+
+        <div class="custom-cart-modal__option">
+
+          <label class="custom-cart-modal__label">
+
+            Quantity
+
+          </label>
+
+          <div class="custom-cart-modal__quantity">
+
+            <button
+              type="button"
+              id="CustomCartQtyMinus"
+            >
+              −
+            </button>
+
+            <input
+              id="CustomCartQty"
+              type="number"
+              min="1"
+              value="1"
+            >
+
+            <button
+              type="button"
+              id="CustomCartQtyPlus"
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Add To Cart -->
+
+        <button
+          id="CustomCartButton"
+          class="custom-cart-modal__button"
+          type="button"
+        >
+
+          <span>
+
+            ADD TO CART
+
+          </span>
+
+          <span class="custom-cart-modal__arrow">
+
+            →
+
+          </span>
+
+        </button>
+
+      </div>
+
+  </div>
+
+</div>
