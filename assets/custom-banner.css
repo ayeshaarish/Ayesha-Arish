@@ -152,4 +152,38 @@
     height: auto;
     display: block;
   }
+  .custom-banner__button {
+  display: inline-flex;
+  width: fit-content;
+  height: 56px;
+  border: none;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: .08em;
+  transition: .3s;
+  padding: 14px 28px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.custom-banner__button-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.custom-banner__button:hover {
+  background: #FFF544;
+  color: #000;
+}
+
+.custom-banner__button:hover .custom-banner__button-arrow {
+  transform: translateX(5px);
+}
+
 }
