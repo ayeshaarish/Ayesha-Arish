@@ -12,6 +12,7 @@
     "banner": {
       "type": "custom-banner",
       "settings": {
+        "image": "shopify://shop_images/banner-image.png",
         "heading": "Heading",
         "description": "Write something here.",
         "button_text": "Shop Now",
