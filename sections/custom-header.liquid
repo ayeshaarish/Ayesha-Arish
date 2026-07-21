@@ -1,0 +1,192 @@
+{{ 'custom-header.css' | asset_url | stylesheet_tag }}
+{{ 'custom-header.js' | asset_url | script_tag }}
+
+<header class="custom-header">
+
+  <div class="page-width">
+
+    <div class="custom-header__wrapper">
+
+      <!-- Mobile Menu Toggle -->
+    <button
+    class="custom-header__toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="CustomMobileMenu"
+    >
+
+    <svg
+        class="custom-header__toggle-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+    >
+        <path
+        d="M3 6H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+        <path
+        d="M3 12H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+        <path
+        d="M3 18H21"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+    </svg>
+
+    </button>
+
+      <!-- Logo -->
+      <div class="custom-header__logo">
+
+        {% if section.settings.logo != blank %}
+          {{
+            section.settings.logo
+            | image_url: width: 240
+            | image_tag:
+              loading: 'lazy',
+              class: 'custom-header__logo-image',
+              alt: shop.name
+          }}
+        {% else %}
+          <span class="custom-header__logo-text">
+            {{ section.settings.logo_text }}
+          </span>
+        {% endif %}
+
+      </div>
+
+      <!-- Tagline -->
+      <div class="custom-header__tagline">
+        {{ section.settings.tagline }}
+      </div>
+
+      <!-- CTA Button -->
+
+      
+      {% if section.settings.button_text != blank %}
+        <a
+          class="custom-header__button"
+          href="{{ section.settings.button_link }}"
+        >
+          <span>{{ section.settings.button_text }}</span>
+          <span class="custom-header__button-arrow">→</span>
+        </a>
+      {% endif %}
+
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <aside
+    id="CustomMobileMenu"
+    class="custom-mobile-menu"
+    aria-hidden="true"
+  >
+
+    <button
+      class="custom-mobile-menu__close"
+      type="button"
+      aria-label="Close menu"
+    >
+      ×
+    </button>
+
+    <!-- Mobile Drawer Content -->
+<div class="custom-mobile-menu__content">
+
+  {% if section.settings.tagline != blank %}
+    <p class="class="custom-header__tagline"">
+      {{ section.settings.tagline }}
+    </p>
+  {% endif %}
+
+  {% if section.settings.button_text != blank %}
+    <a
+      href="{{ section.settings.button_link }}"
+      class="custom-mobile-menu__button"
+    >
+      {{ section.settings.button_text }}
+    </a>
+  {% endif %}
+
+</div>
+
+    {% if section.settings.menu != blank %}
+
+      <nav class="custom-mobile-menu__nav">
+
+        {% for link in section.settings.menu.links %}
+
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+
+        {% endfor %}
+
+      </nav>
+
+    {% endif %}
+
+  </aside>
+
+</header>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "tag": "section",
+  "class": "section-custom-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "TISSO VISION",
+      "default": "Your Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Mobile Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header"
+    }
+  ]
+}
+{% endschema %}

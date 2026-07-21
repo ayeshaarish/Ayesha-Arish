@@ -1,0 +1,19 @@
+{
+  "sections": {
+     "header": {
+      "type": "custom-header"
+    },
+    "banner": {
+      "type": "custom-banner"
+    },
+     "featured-products": {
+      "type": "custom-featured-products"
+    }
+  },
+  "order": [
+    "header",
+    "banner",
+    "featured-products"
+  ]
+}
+ 
